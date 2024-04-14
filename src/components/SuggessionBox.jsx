@@ -10,7 +10,8 @@ function SuggessionBox({ suggest, handleSearchCity }) {
         suggest.map((item) => (
           <div
             className="border p-2  text-center text-capitalize pointer suggested-item"
-            onClick={(e) => handleSearchCity(e)}
+            onClick={(e) => handleSearchCity(e)} 
+            key={item.geoname_id}
           >
             {item.name}
           </div>
