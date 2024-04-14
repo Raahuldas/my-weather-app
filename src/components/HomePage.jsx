@@ -49,14 +49,12 @@ function HomePage() {
   };
 
   useEffect(() => {
-    
     let searched = "";
     if (search) {
       searched = '&where=search(name,"' + search + '")';
     } else {
       searched = "";
     }
-
     fetch(
       `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?limit=20&order_by=${orderBy} ${sortBy}&offset=${offset}${searched}`
     )
