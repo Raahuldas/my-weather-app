@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contents, .days, .table-box,html{
+    scrollbar-width: none;
+}
+
+.contents{
+    height: 52vh;
+}
+
+tr{
+    cursor: pointer;
+}
+
