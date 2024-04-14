@@ -8,7 +8,7 @@ import CitiesContext from "./store/CitiesContext";
 function App() {
   const searchElement = useRef();
   const [search,setSearch] = useState("")
-
+  const [suggest,setSuggest] = useState([]);
   const [currCity, setCurrCity] = useState();
   const [forecastState, setForecastState] = useState("today");
   const [coordinates, setCoordinates] = useState();
@@ -30,8 +30,9 @@ function App() {
   }
 
   const handleSearchCity = (event)=>{
-    event.preventDefault()
-    setSearch(searchElement.current.value)
+    event.preventDefault();
+    setSearch(searchElement.current.value);
+    setSuggest([]);
   }
 
   return (
@@ -54,7 +55,9 @@ function App() {
         handleForecastState,
         handleSearchCity,
         searchElement,
-        search
+        search,
+        suggest,
+        setSuggest
       }}
     >
       <Outlet />

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.contents, .days, .table-box,html{
+.contents, .days, .table-box,html, .suggession-box{
     scrollbar-width: none;
 }
 
@@ -12,7 +12,16 @@
     height: 52vh;
 }
 
-tr{
+tr, .pointer{
     cursor: pointer;
 }
 
+.suggession-box{
+    height: 300px;
+}
+
+.suggested-item:hover{
+    color: rgb(54,54,54);
+    background-color: rgb(200,200,200);
+    font-weight: 700;
+}
