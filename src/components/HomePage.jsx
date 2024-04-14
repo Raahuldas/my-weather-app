@@ -40,10 +40,11 @@ function HomePage() {
       .then((res) => res.json())
       .then((data) => {
         const newCitiesData = data.results;
-        if (!search) {
-          setCitiesData([...citiesData, ...newCitiesData]);
-        }else{
+        if (search) {
+          setOffset(0)
           setCitiesData(newCitiesData);
+        }else{
+          setCitiesData([...citiesData, ...newCitiesData]);
         }
       })
       .catch((error) => console.log(error));
